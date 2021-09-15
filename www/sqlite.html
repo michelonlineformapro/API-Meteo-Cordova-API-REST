@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--https://github.com/csantanapr/cdvlive
+cdvlive browser
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Acceder a des services externes
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+
+    <body>
+
+<!--TEST DE BURGER MENU-->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">METEO</a></li>
+                    <li><a href="sqlite.html">SQLITE</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">METEO</a></li>
+            <li><a href="sqlite.html">SQLITE</a></li>
+        </ul>
+<!--FIN BURGER MENU-->
+    <div class="card-panel center-align margin">
+        <h1>Des données de SQLITE</h1>
+    </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/index.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+            });
+        </script>
+        </body>
+
+</html>
